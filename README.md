@@ -13,4 +13,4 @@
 
 ## Updates from v0.24:
 
-1) Using simple exp data processing instead of mV_rolling_mean
+1) Move ALL data processing to the cloud
