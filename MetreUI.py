@@ -28,7 +28,6 @@ import scene
 
 
 # Metre imports
-import process_test
 from ble_file_uploader import BleUploader
 from lib.UISummaryDelegate import SummaryDelegate
 from lib.UIBleDelegate import BleDelegate, BokehDelegate, loading_html, updating_html, nolog_html, getPlot
@@ -441,7 +440,7 @@ class MainView(ui.View):
                        data_dict = json.load(f)
                    try:
 
-                       data_dict_to_send = process_test.process(data_dict, dt, DEBUG)
+                       data_dict_to_send = data_dict
                        url = 'https://us-central1-metre3-1600021174892.cloudfunctions.net/metre-7500'
                        data_dict_to_send['App_Version'] = APP_VERSION
                        json_text = json.dumps(data_dict_to_send)
